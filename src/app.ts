@@ -7,7 +7,7 @@ import * as dotenv from "dotenv";
 import { strict as assert } from "assert";
 import { load } from "ts-dotenv";
 dotenv.config();
-import sequelize from "./config/db.config"
+import sequelize from "./config/config"
 
 import indexRouter from "./routes/index";
 import usersRouter from "./routes/users";
