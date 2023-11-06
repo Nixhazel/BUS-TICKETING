@@ -3,11 +3,46 @@ import express, { Request, Response, NextFunction } from "express";
 import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
+import * as dotenv from "dotenv";
+import { strict as assert } from "assert";
+import { load } from "ts-dotenv";
+dotenv.config();
+import sequelize from "./config/config"
 
 import indexRouter from "./routes/index";
 import usersRouter from "./routes/users";
 
 const app = express();
+
+// DotEnv variable types
+const env = load({
+	DB_USERNAME: String,
+	DB_PASSWORD: String,
+	DB_HOST: String,
+	DB_PORT: String,
+	DB_NAME: String,
+	JWT_SECRET: String,
+	SALT_ROUNDS: Number
+});
+
+const url = process.env.MONGO_URL as string;
+
+assert.ok(env.DB_USERNAME === process.env.DB_USERNAME);
+assert.ok(env.DB_PASSWORD === process.env.DB_PASSWORD);
+assert.ok(env.DB_HOST === process.env.DB_HOST);
+assert.ok(env.DB_NAME === process.env.DB_NAME);
+assert.ok(env.JWT_SECRET === process.env.JWT_SECRET);
+
+// DataBase connection
+(async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Connection has been established successfully.");
+  } catch (error) {
+    console.error("Unable to connect to the database:", error);
+  }
+})();
+
 
 // view engine setup
 app.set("views", path.join(__dirname, "../", "views"));
