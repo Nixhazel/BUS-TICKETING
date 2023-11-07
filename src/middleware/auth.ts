@@ -28,9 +28,9 @@ export const authenticate = function (
 
 	try {
 		const decoded = jwt.verify(token, secret) as {
-			_id: string;
+			userId: string;
 		};
-		const user = decoded._id;
+		const user = decoded.userId;
 		if (!user) {
 			return res.status(400).send({
 				status: "error",
