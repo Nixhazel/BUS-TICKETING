@@ -10,7 +10,7 @@ import {
 
 @Table({
 	timestamps: true,
-	tableName: "busticket",
+	tableName: "bustickets",
 	modelName: "BusTicket"
 })
 export class BusTicket extends Model {
