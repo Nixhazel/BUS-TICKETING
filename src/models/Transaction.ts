@@ -38,11 +38,11 @@ export class Transaction extends Model {
 		type: DataType.DECIMAL(10, 2),
 		allowNull: false
 	})
-	declare amount: string;
+	declare amount: number;
 
 	@CreatedAt
-	declare created_at: Date;
+	declare createdAt: Date;
 
 	@UpdatedAt
-	declare updated_at: Date;
+	declare updatedAt: Date;
 }

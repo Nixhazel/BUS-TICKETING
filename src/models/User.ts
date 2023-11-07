@@ -10,34 +10,40 @@ import {
 
 
 @Table({
-   timestamps: true,
-   tableName: "users",
-   modelName: "User"
+	timestamps: true,
+	tableName: "users",
+	modelName: "User"
 })
 export class User extends Model {
-   @Column({
-      primaryKey: true,
-      type: DataType.UUID,
-      defaultValue: DataType.UUIDV4
-   })
-   declare id: string;
+	@Column({
+		primaryKey: true,
+		type: DataType.UUID,
+		defaultValue: DataType.UUIDV4
+	})
+	declare id: string;
 
-   @Column({
-      type: DataType.STRING,
-      unique: true,
-      allowNull: false,
-   })
-   declare username: string;
+	@Column({
+		type: DataType.STRING,
+		unique: true,
+		allowNull: false
+	})
+	declare username: string;
 
-   @Column({
-      type: DataType.STRING,
-      allowNull: false,
-   })
-   declare password: string;
+	@Column({
+		type: DataType.STRING,
+		allowNull: false
+	})
+	declare password: string;
 
-   @CreatedAt
-   declare created_at: Date;
+	@Column({
+		type: DataType.DECIMAL(10, 2),
+		defaultValue: 0.0
+	})
+	declare balance: number;
 
-   @UpdatedAt
-   declare updated_at: Date
+	@CreatedAt
+	declare createdAt: Date;
+
+	@UpdatedAt
+	declare updatedAt: Date;
 }
