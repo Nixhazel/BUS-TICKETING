@@ -1,4 +1,7 @@
 import { Sequelize } from "sequelize-typescript";
+import { BusTicket } from '../models/BusTicket';
+import { Transaction } from '../models/Transaction';
+import { User } from '../models/User';
 
 const sequelize = new Sequelize({
 	database: process.env.DB_NAME,
@@ -7,7 +10,7 @@ const sequelize = new Sequelize({
 	password: process.env.DB_PASSWORD,
 	host: process.env.DB_HOST,
 	port: Number(process.env.DB_PORT),
-	models: [__dirname + "/models"]
+	models: [BusTicket, Transaction, User]
 });
 
 export default sequelize;

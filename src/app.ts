@@ -9,8 +9,9 @@ import { load } from "ts-dotenv";
 dotenv.config();
 import sequelize from "./config/config"
 
-import indexRouter from "./routes/index";
 import usersRouter from "./routes/users";
+import transactionRouter from "./routes/transaction";
+import busTicketRouter from "./routes/busTicket";
 
 const app = express();
 
@@ -24,8 +25,6 @@ const env = load({
 	JWT_SECRET: String,
 	SALT_ROUNDS: Number
 });
-
-const url = process.env.MONGO_URL as string;
 
 assert.ok(env.DB_USERNAME === process.env.DB_USERNAME);
 assert.ok(env.DB_PASSWORD === process.env.DB_PASSWORD);
@@ -54,8 +53,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/api/v1", indexRouter);
 app.use("/api/v1/users", usersRouter);
+app.use("/api/v1/transactions", transactionRouter);
+app.use("/api/v1/ticket", busTicketRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req: Request, res: Response, next: NextFunction) {

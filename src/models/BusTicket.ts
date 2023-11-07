@@ -29,8 +29,8 @@ export class BusTicket extends Model {
 	declare userId: string;
 
 	@CreatedAt
-	declare created_at: Date;
+	declare createdAt: Date;
 
 	@UpdatedAt
-	declare updated_at: Date;
+	declare updatedAt: Date;
 }
