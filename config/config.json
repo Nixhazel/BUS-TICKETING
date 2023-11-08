@@ -4,7 +4,7 @@
     "password": "",
     "database": "",
     "host": "",
-    "dialect": "",
+    "dialect": "mysql",
     "port": 
   }
 }
