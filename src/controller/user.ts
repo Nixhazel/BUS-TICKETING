@@ -9,13 +9,6 @@ const secret = process.env.JWT_SECRET as string;
 
 export const register = async (req: Request, res: Response) => {
    try {
-      console.log(
-				process.env.DB_NAME,
-				process.env.DB_USERNAME,
-				process.env.DB_PASSWORD,
-				process.env.DB_HOST,
-				process.env.DB_PORT
-			);
 		const { username, password } = req.body;
 		const existingUser = await User.findOne({ where: { username } });
 		if (existingUser) {
