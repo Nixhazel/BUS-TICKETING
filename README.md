@@ -25,11 +25,17 @@ Our application provides a user-friendly interface and efficient backend process
 
 ## Installation
 
-1. Clone the repository:/n git clone https://github.com/Nixhazel/BUS-TICKETING.git
+1. Clone the repository: 
 
-2. Navigate to the project directory:/n cd BUS-TICKETING
+    git clone https://github.com/Nixhazel/BUS-TICKETING.git
 
-3. Install project dependencies:/n npm install
+2. Navigate to the project directory:
+
+   cd BUS-TICKETING
+
+3. Install project dependencies:
+
+   npm install
 
 ## Configuration
 
@@ -56,9 +62,13 @@ npx sequelize db:seed:all
 
 ## Usage
 
-1. Start the development server:/n npm run dev
+1. Start the development server:
 
-to start watching with tsc:/n npm start
+   npm run dev
+
+to start watching with tsc:
+
+   npm start
 
 in another terminal
 
