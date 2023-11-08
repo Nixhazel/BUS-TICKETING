@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "Nyeore14",
-    "database": "busticketing",
-    "host": "localhost",
-    "dialect": "mysql",
-    "port": 3306
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "dialect": "",
+    "port": 
   }
 }
