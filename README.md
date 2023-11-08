@@ -52,11 +52,13 @@ Replace `your-username`, `your-password`, `your-database`, and `your-secret-key`
 
 ## Database Setup
 
-1. Create the database schema by running migrations:
+1. Enter your Database config details in the config files 
+
+2. Create the database schema by running migrations:
 
 npx sequelize db:migrate
 
-2. Optionally, seed the database with initial data (if required):
+3. Optionally, seed the database with initial data (if required):
 
 npx sequelize db:seed:all
 
