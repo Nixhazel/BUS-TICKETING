@@ -4,17 +4,17 @@ Welcome to the Bus Ticketing Platform, a modern and efficient system for managin
 
 ## Features
 
-### User Registration: Users can easily create accounts with just a few clicks.
+User Registration: Users can easily create accounts with just a few clicks.
 
-### Ticket Purchase: Purchase bus tickets directly through your account.
+Ticket Purchase: Purchase bus tickets directly through your account.
 
-### Account Credit: Add funds to your account securely for hassle-free ticket purchases.
+Account Credit: Add funds to your account securely for hassle-free ticket purchases.
 
-### Balance Tracking: Keep an eye on your account balance and transaction history.
+Balance Tracking: Keep an eye on your account balance and transaction history.
 
-### Transaction History: Access detailed transaction records and filter by date/time period.
+Transaction History: Access detailed transaction records and filter by date/time period.
 
-### Send Credit: Share credit with friends and family directly from your account.
+Send Credit: Share credit with friends and family directly from your account.
 
 Our application provides a user-friendly interface and efficient backend processes to make bus ticketing quick and convenient. Whether you're a regular commuter or an occasional traveler, our platform has you covered.
 
@@ -25,17 +25,11 @@ Our application provides a user-friendly interface and efficient backend process
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository:/n git clone https://github.com/Nixhazel/BUS-TICKETING.git
 
-git clone https://github.com/Nixhazel/BUS-TICKETING.git
+2. Navigate to the project directory:/n cd BUS-TICKETING
 
-2. Navigate to the project directory:
-
-cd BUS-TICKETING
-
-3. Install project dependencies:
-
-npm install
+3. Install project dependencies:/n npm install
 
 ## Configuration
 
@@ -62,13 +56,9 @@ npx sequelize db:seed:all
 
 ## Usage
 
-1. Start the development server:
+1. Start the development server:/n npm run dev
 
-npm run dev
-
-to start watching with tsc 
-
-npm start
+to start watching with tsc:/n npm start
 
 in another terminal
 
