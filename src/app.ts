@@ -7,7 +7,7 @@ import * as dotenv from "dotenv";
 import { strict as assert } from "assert";
 import { load } from "ts-dotenv";
 dotenv.config();
-import sequelize from "./config/config"
+import sequelize from "./config/config";
 
 import usersRouter from "./routes/users";
 import transactionRouter from "./routes/transaction";
@@ -34,14 +34,13 @@ assert.ok(env.JWT_SECRET === process.env.JWT_SECRET);
 
 // DataBase connection
 (async () => {
-  try {
-    await sequelize.authenticate();
-    console.log("Connection has been established successfully.");
-  } catch (error) {
-    console.error("Unable to connect to the database:", error);
-  }
+	try {
+		await sequelize.authenticate();
+		console.log("Connection has been established successfully.");
+	} catch (error) {
+		console.error("Unable to connect to the database:", error);
+	}
 })();
-
 
 // view engine setup
 app.set("views", path.join(__dirname, "../", "views"));
